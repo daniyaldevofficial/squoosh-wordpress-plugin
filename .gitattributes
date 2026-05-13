@@ -1,6 +1,8 @@
-**/*.js linguist-vendored
-**/*.css linguist-vendored
+* linguist-vendored
 
-admin/** linguist-vendored
-
+*.php linguist-detectable
 **/*.php linguist-detectable
+
+*.html linguist-documentation
+*.css linguist-documentation
+*.js linguist-documentation
