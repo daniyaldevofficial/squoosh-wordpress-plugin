@@ -1,0 +1,437 @@
+/**
+ * Squoosh Media Editor - Admin Styles
+ */
+
+/* Settings Page */
+.squoosh-settings-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background: linear-gradient(135deg, #ff3385 0%, #f06 100%);
+    border-radius: 8px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.squoosh-settings-header .squoosh-logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    background: #fff;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.squoosh-settings-header p {
+    margin: 0;
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+/* Warning Box */
+.squoosh-warning {
+    margin-top: 10px;
+    padding: 12px 15px;
+    background: #fee;
+    border-left: 4px solid #dc3232;
+    color: #8b0000;
+    border-radius: 0 4px 4px 0;
+}
+
+.squoosh-warning .dashicons {
+    color: #dc3232;
+    margin-right: 5px;
+}
+
+/* Info Box */
+.squoosh-info-box {
+    margin-top: 30px;
+    padding: 20px;
+    background: #f0f6fc;
+    border: 1px solid #c3c4c7;
+    border-left: 4px solid #2271b1;
+    border-radius: 0 4px 4px 0;
+}
+
+.squoosh-info-box h3 {
+    margin-top: 0;
+    color: #1d2327;
+}
+
+.squoosh-info-box ol {
+    margin-left: 20px;
+}
+
+.squoosh-info-box li {
+    margin-bottom: 8px;
+}
+
+/* Modal Styles */
+.squoosh-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.squoosh-modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(4px);
+}
+
+.squoosh-modal-container {
+    position: relative;
+    width: 95vw;
+    height: 95vh;
+    max-width: 1600px;
+    background: #1d1d1d;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.squoosh-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 20px;
+    background: linear-gradient(135deg, #ff3385 0%, #f06 100%);
+    color: #fff;
+}
+
+.squoosh-modal-header h2 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.squoosh-modal-close {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+
+.squoosh-modal-close:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.squoosh-modal-close .dashicons {
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
+}
+
+.squoosh-modal-content {
+    flex: 1;
+    overflow: hidden;
+}
+
+.squoosh-modal-content iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.squoosh-modal-footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+    padding: 12px 20px;
+    background: #2a2a2a;
+    border-top: 1px solid #3a3a3a;
+}
+
+.squoosh-modal-status {
+    flex: 1;
+    color: #aaa;
+    font-size: 13px;
+}
+
+.squoosh-modal-save {
+    background: linear-gradient(135deg, #ff3385 0%, #f06 100%) !important;
+    border-color: #f06 !important;
+    color: #fff !important;
+    padding: 8px 24px !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    transition: transform 0.2s, box-shadow 0.2s !important;
+}
+
+.squoosh-modal-save:hover:not(:disabled) {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(255, 51, 133, 0.4);
+}
+
+.squoosh-modal-save:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.squoosh-modal-save.saving {
+    pointer-events: none;
+}
+
+.squoosh-modal-save.saving::after {
+    content: '';
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin-left: 8px;
+    border: 2px solid #fff;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: squoosh-spin 0.8s linear infinite;
+}
+
+@keyframes squoosh-spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Media Library Edit Link */
+.squoosh-edit-link {
+    color: #ff3385 !important;
+}
+
+.squoosh-edit-link:hover {
+    color: #f06 !important;
+}
+
+/* Attachment Edit Button */
+.misc-pub-squoosh {
+    border-top: 1px solid #c3c4c7;
+    padding-top: 10px;
+}
+
+.squoosh-edit-btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    background: linear-gradient(135deg, #ff3385 0%, #f06 100%);
+    border-color: #f06;
+    color: #fff;
+    font-weight: 500;
+}
+
+.squoosh-edit-btn:hover {
+    background: linear-gradient(135deg, #f06 0%, #e05 100%);
+    border-color: #e05;
+    color: #fff;
+}
+
+.squoosh-edit-btn .dashicons {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+}
+
+/* Bulk Convert Page */
+.squoosh-bulk-convert-container {
+    max-width: 1200px;
+}
+
+.squoosh-bulk-settings {
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    margin-top: 20px;
+}
+
+.squoosh-bulk-settings h2 {
+    margin-top: 0;
+}
+
+.squoosh-bulk-preview {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 10px;
+    margin: 20px 0;
+    padding: 15px;
+    background: #f0f0f1;
+    border-radius: 4px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.squoosh-bulk-item {
+    position: relative;
+    aspect-ratio: 1;
+    border-radius: 4px;
+    overflow: hidden;
+    background: #fff;
+    border: 2px solid transparent;
+    transition: border-color 0.2s;
+}
+
+.squoosh-bulk-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.squoosh-bulk-item-status {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.squoosh-bulk-item.processing .squoosh-bulk-item-status {
+    opacity: 1;
+}
+
+.squoosh-bulk-item.processing .squoosh-bulk-item-status::after {
+    content: '';
+    width: 24px;
+    height: 24px;
+    border: 3px solid #fff;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: squoosh-spin 0.8s linear infinite;
+}
+
+.squoosh-bulk-item.done {
+    border-color: #00a32a;
+}
+
+.squoosh-bulk-item.done .squoosh-bulk-item-status {
+    opacity: 1;
+    background: rgba(0, 163, 42, 0.7);
+}
+
+.squoosh-bulk-item.done .squoosh-bulk-item-status::after {
+    content: '✓';
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.squoosh-bulk-item.error {
+    border-color: #dc3232;
+}
+
+.squoosh-bulk-item.error .squoosh-bulk-item-status {
+    opacity: 1;
+    background: rgba(220, 50, 50, 0.7);
+}
+
+.squoosh-bulk-item.error .squoosh-bulk-item-status::after {
+    content: '✕';
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Progress Bar */
+.squoosh-bulk-progress {
+    margin: 20px 0;
+}
+
+.squoosh-progress-bar {
+    height: 24px;
+    background: #f0f0f1;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.squoosh-progress-fill {
+    height: 100%;
+    width: 0;
+    background: linear-gradient(90deg, #ff3385, #f06, #ff3385);
+    background-size: 200% 100%;
+    animation: squoosh-progress-gradient 2s ease infinite;
+    transition: width 0.3s ease;
+    border-radius: 12px;
+}
+
+@keyframes squoosh-progress-gradient {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 200% 0%; }
+}
+
+#squoosh-progress-text {
+    text-align: center;
+    margin-top: 10px;
+    color: #50575e;
+}
+
+/* Toast Notification */
+.squoosh-toast {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    padding: 12px 24px;
+    background: #1d1d1d;
+    color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    z-index: 100001;
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.squoosh-toast.show {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+}
+
+.squoosh-toast.success {
+    background: linear-gradient(135deg, #00a32a 0%, #008a20 100%);
+}
+
+.squoosh-toast.error {
+    background: linear-gradient(135deg, #dc3232 0%, #b52727 100%);
+}
+
+/* Responsive */
+@media (max-width: 782px) {
+    .squoosh-modal-container {
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0;
+    }
+    
+    .squoosh-modal-footer {
+        flex-wrap: wrap;
+    }
+    
+    .squoosh-modal-status {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
