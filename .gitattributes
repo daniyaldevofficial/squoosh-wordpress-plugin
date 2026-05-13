@@ -1,8 +1,0 @@
-* linguist-vendored
-
-*.php linguist-detectable
-**/*.php linguist-detectable
-
-*.html linguist-documentation
-*.css linguist-documentation
-*.js linguist-documentation
