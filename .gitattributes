@@ -1,5 +1,7 @@
-assets/** linguist-vendored
-node_modules/** linguist-vendored
+admin/css/* linguist-vendored
+admin/js/* linguist-vendored
 
 *.php linguist-detectable
-*.js linguist-documentation
+includes/*.php linguist-detectable
+
+*.html linguist-vendored
